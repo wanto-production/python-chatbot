@@ -34,10 +34,6 @@ Run the chatbot:
 python chatbot.py
 ```
 
-## Customization
-
-You can customize the responses by editing the `responses.json` file.
-
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
