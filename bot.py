@@ -32,13 +32,13 @@ class Chatbot:
             self.mode = command
             await update.message.reply_text(f"Mode telah diubah ke: {self.mode}")
         else:
-            await update.message.reply_text(f"no mode with name ({command})\nuse:\n\n{"\n".join([f"/mode {mode}" for mode in self.allow_mode])}")
+            await update.message.reply_text(f"no mode with name ({command})\nuse:\n\n{'\n'.join([f"/mode {mode}" for mode in self.allow_mode])}")
 
     async def start(self,update: Update, context: CallbackContext):
         await update.message.reply_text('Halo! Saya adalah bot sederhana di tenagai oleh meta ai!. Kirimkan pesan untuk memulai!')
     
     async def help(self,update:Update,context:CallbackContext):
-        await update.message.reply_text(f"command yang tersedia: \n\n/mode mengubah mode({",".join(self.allow_mode)})\n/help melihat command yang ada")
+        await update.message.reply_text(f"command yang tersedia: \n\n/mode mengubah mode({','.join(self.allow_mode)})\n/help melihat command yang ada")
     
     # Fungsi untuk menanggapi pesan teks
     async def echo(self,update: Update, context: CallbackContext):
